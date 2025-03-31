@@ -58,11 +58,11 @@ python test.py --dataroot ./octa-500/OCT2OCTA3M_3D --name MuTri_3M_Stage_test --
 ```
 
 
-## :rocket: :rocket:  Implementation reference  
+## :rocket::rocket:  Implementation reference and Express our gratitude
   - https://github.com/ustlsh/TransPro
 
 
-## :smile: :smile: Feel free to contact us 
+## :smile::smile: Feel free to contact us 
   - 1248013830@qq.com 
 
 ## Citation
