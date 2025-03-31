@@ -6,8 +6,7 @@ This repository contains the PyTorch implementation of the following paper:
 
 This work focuses on the OCT to OCTA 3D image translation in discrete and finite space. In the first stage, we pre-train two vector-quantized variational auto-encoder (VQVAE) by reconstructing 3D OCT and 3D OCTA data, providing semantic prior for subsequent multi-view guidances. In the second stage, our multi-view tri-alignment facilitates another VQVAE model to learn the mapping from the OCT domain to the OCTA domain in discrete and finite space. Specifically, a contrastive-inspired semantic alignment is proposed to maximize the mutual information with the pre-trained models from OCT and OCTA views, to facilitate codebook learning. Meanwhile, a vessel structure alignment is proposed to minimize the structure discrepancy with the pre-trained models from the OCTA project map view, benefiting from learning the detailed vessel structure information.
 
-![image](figs/ours.pdf)
-
+<a href="Fig/ours.pdf" target="_blank">PDF.</a>
 
 ## Installation
 
