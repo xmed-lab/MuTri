@@ -6,7 +6,7 @@ This repository contains the PyTorch implementation of the following paper:
 
 This work focuses on the OCT to OCTA 3D image translation in discrete and finite space. In the first stage, we pre-train two vector-quantized variational auto-encoder (VQVAE) by reconstructing 3D OCT and 3D OCTA data, providing semantic prior for subsequent multi-view guidances. In the second stage, our multi-view tri-alignment facilitates another VQVAE model to learn the mapping from the OCT domain to the OCTA domain in discrete and finite space. Specifically, a contrastive-inspired semantic alignment is proposed to maximize the mutual information with the pre-trained models from OCT and OCTA views, to facilitate codebook learning. Meanwhile, a vessel structure alignment is proposed to minimize the structure discrepancy with the pre-trained models from the OCTA project map view, benefiting from learning the detailed vessel structure information.
 
-<a href="Fig/ours.pdf" target="_blank">PDF.</a>
+![image](Fig/ours.png)
 
 ## Installation
 
@@ -69,7 +69,7 @@ python test.py --dataroot ./octa-500/OCT2OCTA3M_3D --name MuTri_3M_Stage_test --
 ## Citation
 If you find our paper is helpful in your research or applications, please consider citing:
 ```
-@inproceedings{zhang2025logsad,
+@inproceedings{chen2025mutri,
       title={MuTri: Multi-view Tri-alignment for OCT to OCTA 3D Image Translation},
       author={Zhuangzhuang Chen, Hualiang Wang, Chubin Ou, Xiaomeng Li},
       year={2025},
