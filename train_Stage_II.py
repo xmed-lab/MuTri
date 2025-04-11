@@ -406,7 +406,7 @@ for epoch in range(opt.epoch_count, opt.n_epochs + opt.n_epochs_decay + 1):
 
 
         loss = recon_loss + latent_loss_weight * latent_loss +(mutual_contrastive_loss_OCT + mutual_contrastive_loss_OCTA   + sim_consis_loss_proj )*Weight
-
+        loss.backward()
         cur_mae = MAE_(out.detach().cpu().numpy(),train_data_B.cpu().numpy())
         Train_MAE += cur_mae
         Train_num += 1
@@ -468,10 +468,4 @@ for epoch in range(opt.epoch_count, opt.n_epochs + opt.n_epochs_decay + 1):
                 print("saving best...")
 
     print('End of epoch %d / %d \t Time Taken: %d sec' %
-          (epoch, opt.n_epochs + opt.n_epochs_decay, time.time() - epoch_start_time))
-
-
-    # Fixed learning rate  or change to unfixed learning rate
-    if epoch > opt.n_epochs:
-       model.update_learning_rate()
-
+          (epoch, opt.n_epochs + opt.n_epochs_decay, time.time() - epoch_start_time)) 
