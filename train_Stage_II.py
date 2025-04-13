@@ -366,10 +366,12 @@ for epoch in range(opt.epoch_count, opt.n_epochs + opt.n_epochs_decay + 1):
 
         sim_consis_loss_proj =  (loss_sim_proj/num)
 
-        mutual_contrastive_loss_OCTA = 0.0 
-        mutual_contrastive_loss_OCT  = 0.0   
+        
         #****Coming Soon****# 
         #****This loss is still in progress for the journal version****# 
+        mutual_contrastive_loss_OCTA = 0.0 
+        mutual_contrastive_loss_OCT  = 0.0   
+
 
         loss = recon_loss + latent_loss_weight * latent_loss +(mutual_contrastive_loss_OCT + mutual_contrastive_loss_OCTA   + sim_consis_loss_proj )*Weight
         loss.backward()
