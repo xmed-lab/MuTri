@@ -380,7 +380,7 @@ for epoch in range(opt.epoch_count, opt.n_epochs + opt.n_epochs_decay + 1):
             log_prob = logit - torch.log((torch.exp(logit) * diag_mask).sum(1, keepdim=True))
             mean_log_prob_pos = (intra_mask * log_prob).sum(1) / intra_mask.sum(1)
             cl_loss = - mean_log_prob_pos.mean()
-            mutual_contrastive_loss_OCTA = mutual_contrastive_loss_OCTA + cl_loss*0.04
+            mutual_contrastive_loss_OCTA = mutual_contrastive_loss_OCTA + cl_loss*0.08
         mutual_contrastive_loss_OCTA = mutual_contrastive_loss_OCTA * 0.25 
 
         mutual_contrastive_loss_OCT  = 0.0   
@@ -397,7 +397,7 @@ for epoch in range(opt.epoch_count, opt.n_epochs + opt.n_epochs_decay + 1):
             log_prob = logit - torch.log((torch.exp(logit) * diag_mask).sum(1, keepdim=True))
             mean_log_prob_pos = (intra_mask * log_prob).sum(1) / intra_mask.sum(1)
             cl_loss = - mean_log_prob_pos.mean()
-            mutual_contrastive_loss_OCT = mutual_contrastive_loss_OCT +  cl_loss*0.04 
+            mutual_contrastive_loss_OCT = mutual_contrastive_loss_OCT +  cl_loss*0.08 
         mutual_contrastive_loss_OCT = mutual_contrastive_loss_OCT * 0.25 
         
         loss = recon_loss + latent_loss_weight * latent_loss +(mutual_contrastive_loss_OCT + mutual_contrastive_loss_OCTA   + sim_consis_loss_proj )*Weight
