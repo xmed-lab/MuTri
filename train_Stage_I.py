@@ -146,7 +146,8 @@ criterion = nn.MSELoss()
 latent_loss_weight = 0.25
 
 
-for epoch in range(opt.epoch_count, opt.n_epochs + opt.n_epochs_decay + 1):
+#for epoch in range(opt.epoch_count, opt.n_epochs + opt.n_epochs_decay + 1):
+for epoch in range(opt.epoch_count, 2000 + 1):    
     epoch_start_time = time.time()
     iter_start_time = time.time()
     epoch_iter = 0
